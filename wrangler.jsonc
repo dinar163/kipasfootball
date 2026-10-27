@@ -1,0 +1,13 @@
+{
+  // WAJIB sama persis dengan nama Worker di dashboard Cloudflare
+  "name": "dinar",
+  "main": "worker.js",
+  "compatibility_date": "2025-09-01",
+  "keep_vars": true,
+
+  // WAJIB: ganti ISI_ID_KV_DI_SINI dengan ID namespace KV (Storage & databases > KV > Create namespace)
+  "kv_namespaces": [{ "binding": "CONFIG", "id": "ISI_ID_KV_DI_SINI" }]
+
+  // OPSIONAL (butuh R2 aktif): hapus tanda // di baris bawah dan beri koma di akhir baris kv_namespaces di atas
+  // "r2_buckets": [{ "binding": "APK", "bucket_name": "dinar-apk" }]
+}
